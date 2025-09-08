@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Complaint System</title>
+    <link rel="stylesheet" href="styles/global.css">
+</head>
+<body>
+    <div class="container">
+        <header class="dashboard-header">
+            <h1>Student Dashboard</h1>
+            <div class="user-info">
+                <span id="userName"></span>
+                <button class="btn btn-secondary" onclick="logout()">Logout</button>
+            </div>
+        </header>
+
+        <div class="dashboard-content">
+            <!-- Create Complaint Form -->
+            <div class="card">
+                <h2>Submit New Complaint</h2>
+                <form id="complaintForm">
+                    <div class="form-group">
+                        <label for="title">Title:</label>
+                        <input type="text" id="title" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description">Description:</label>
+                        <textarea id="description" rows="4" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Submit Complaint</button>
+                </form>
+            </div>
+
+            <!-- My Complaints -->
+            <div class="card">
+                <h2>My Complaints</h2>
+                <div id="complaintsList">
+                    <p class="loading">Loading complaints...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/student.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard - Complaint System</title>
+    <link rel="stylesheet" href="styles/global.css">
+</head>
+<body>
+    <div class="container">
+        <header class="dashboard-header">
+            <h1>Teacher Dashboard</h1>
+            <div class="user-info">
+                <span id="userName"></span>
+                <button class="btn btn-secondary" onclick="logout()">Logout</button>
+            </div>
+        </header>
+
+        <div class="dashboard-content">
+            <div class="card">
+                <h2>Assigned Complaints</h2>
+                <div id="complaintsList">
+                    <p class="loading">Loading assigned complaints...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/teacher.js"></script>
+</body>
+</html>

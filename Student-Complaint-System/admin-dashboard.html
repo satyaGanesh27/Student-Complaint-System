@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Complaint System</title>
+    <link rel="stylesheet" href="styles/global.css">
+</head>
+<body>
+    <div class="container">
+        <header class="dashboard-header">
+            <h1>Admin Dashboard</h1>
+            <div class="user-info">
+                <span id="userName"></span>
+                <button class="btn btn-secondary" onclick="logout()">Logout</button>
+            </div>
+        </header>
+
+        <div class="dashboard-content">
+            <div class="card">
+                <h2>Complaint Management</h2>
+                
+                <div class="admin-actions">
+                    <button class="btn btn-primary" onclick="assignFCFS()">
+                        Assign Next Complaint (FCFS)
+                    </button>
+                    <select id="teacherSelect">
+                        <option value="">Select Teacher for Manual Assignment</option>
+                    </select>
+                    <button class="btn btn-secondary" onclick="assignManual()">
+                        Assign Selected
+                    </button>
+                </div>
+                
+                <div id="complaintsList">
+                    <p class="loading">Loading all complaints...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/admin.js"></script>
+</body>
+</html>
